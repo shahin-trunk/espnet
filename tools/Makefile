@@ -158,7 +158,7 @@ warp-ctc.done: pytorch.done conda_packages.done
 warp-transducer.done: pytorch.done conda_packages.done
 ifeq ($(strip $(CPU_ONLY)),)
 	. ./activate_python.sh && ./installers/install_warp-transducer.sh
-	. ./activate_python.sh &&  ./installers/install_warp-rnnt.sh $(CUDA_VERSION)
+#	. ./activate_python.sh &&  ./installers/install_warp-rnnt.sh $(CUDA_VERSION)
 	touch warp-transducer.done
 else
 	. ./activate_python.sh && ./installers/install_warp-transducer.sh
